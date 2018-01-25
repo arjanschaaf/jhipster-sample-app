@@ -1,0 +1,14 @@
+---
+project:
+  key: JHIPSTER
+  plan:
+    key: EXAMPLE
+    name: JHipster Example Project
+stages:
+  - jobs:
+      - scripts:
+          - ./mvnw -Pprod clean package
+        artifacts:
+          - name: webapp
+            path: target/*.war
+...
