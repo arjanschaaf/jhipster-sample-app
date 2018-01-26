@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('build') {
       agent {
-        docker {
-          image '8u151-jdk-slim'
+        node {
+          label 'ACI-container'
         }
         
       }
