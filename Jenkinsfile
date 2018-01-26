@@ -9,6 +9,11 @@ pipeline {
         
       }
       steps {
+        echo 'Starting the build!'
+        sh '''echo "current path:" `pwd`
+echo "list contents of current path:"
+ls -l'''
+        echo 'let\'s try maven! :-)'
         sh './mvnw -Pprod clean package'
       }
     }
